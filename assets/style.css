@@ -38,6 +38,7 @@ h2 {
     border: grey 0.5vw solid;
     border-radius: 1vw;
     padding: 0.5vw;
+    margin: 0.5vw;
 }
 .city {
     font-size: 3.5vw;

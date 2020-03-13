@@ -34,3 +34,23 @@ h2 {
     border-radius: 0.75vw;
     background-color: ghostwhite;
 }
+#wrapDash {
+    border: grey 0.5vw solid;
+    border-radius: 1vw;
+    padding: 0.5vw;
+}
+.city {
+    font-size: 3.5vw;
+    border-bottom: solid black 0.25vw;
+}
+.cityInfo {
+    font-size: 2vw;
+}
+.uvInfo {
+    font-size: 2vw;
+}
+.uvSpan {
+    background-color: white;
+    border-radius: 0.75vw;
+    padding: 0.25vw;
+}

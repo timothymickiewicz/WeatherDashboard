@@ -36,7 +36,7 @@ h2 {
 }
 #wrapDash {
     border: grey 0.5vw solid;
-    border-radius: 1vw;
+    border-radius: 0.5vw;
     padding: 0.5vw;
     margin: 0.5vw;
 }
@@ -54,4 +54,12 @@ h2 {
     background-color: white;
     border-radius: 0.75vw;
     padding: 0.25vw;
+}
+.card {
+    border: solid grey 0.5vw;
+    border-radius: 0.5vw;
+    margin: 0.5vw;
+}
+#wrapFiveDays {
+    align-content: center;
 }

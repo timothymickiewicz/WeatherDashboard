@@ -1,5 +1,5 @@
 # WeatherDashboard
-Live link: </br>
+Live link: https://timothymickiewicz.github.io/WeatherDashboard/</br>
 ## Contributor
 Timothy Mickiewicz
 ## Technologies

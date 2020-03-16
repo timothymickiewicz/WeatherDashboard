@@ -25,7 +25,7 @@ else {
 }
 // Adds a new city to the buttons array, sets the array, and refreshes page
 btn.on("click", function() {
-  input = $(":text:eq(" + 0 + ")").val();
+  input = $(":text:eq(" + 0 + ")").val().trim();
   citiesArray.push(input);
   localStorage.setItem("cities", JSON.stringify(citiesArray));
   refreshPage();
@@ -38,7 +38,6 @@ function pageLoad() {
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-    console.log(response);
     city = response.city.name;
     temp = response.list[0].main.temp;
     temp = (temp - 273.15) * 9/5 + 32
@@ -53,7 +52,6 @@ function pageLoad() {
         url: queryURL2,
         method: "GET"
       }).then(function(response2) {
-        console.log(response2);
         uvIndex = response2.value;
         var uvSpan = $("<span>").text(uvIndex).addClass("uvSpan");
         $("<div>").appendTo("#wrapDash").addClass("uvInfo").text("UV Index: ").append(uvSpan);
@@ -95,7 +93,6 @@ function loadBtns() {
       url: queryURL,
       method: "GET"
     }).then(function(response) {
-      console.log(response);
       city = response.city.name;
       temp = response.list[0].main.temp;
       temp = (temp - 273.15) * 9/5 + 32

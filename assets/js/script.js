@@ -12,8 +12,10 @@ var humidity = "";
 var windSpeed = "";
 var latitude = "";
 var longitude = "";
+
 // Puts date and time onto header
 $("#date").text(date);
+
 // Establishing default key values
 if (localStorage.getItem("cities") == null) {
   var defaultKey = "Nashville";
@@ -23,6 +25,7 @@ if (localStorage.getItem("cities") == null) {
 else {
   citiesArray = JSON.parse(localStorage.getItem("cities"));
 }
+
 // Adds a new city to the buttons array, sets the array, and refreshes page
 btn.on("click", function() {
   input = $(":text:eq(" + 0 + ")").val().trim();
@@ -30,6 +33,7 @@ btn.on("click", function() {
   localStorage.setItem("cities", JSON.stringify(citiesArray));
   refreshPage();
 });
+
 // Grabbing the last entry in the citiesArray to load onto page
 function pageLoad() {
   loadBtns();
@@ -75,10 +79,12 @@ function pageLoad() {
   });
 }
 pageLoad();
+
 // Making a refresh page function for when user submits their new city
 function refreshPage(){
     window.location.reload();
 }; 
+
 // Creating buttons on page load for local storage entries, and assigning click events for each to pull information on the selected city
 function loadBtns() {
   for (var i=1; i < citiesArray.length; i++) {
@@ -131,6 +137,7 @@ function loadBtns() {
     });  
   };
 };
+
 // Appends the main dashboard information to the page
 function appendInformation() {
   $("<div>").appendTo("#wrapDash").addClass("city").text(city + " (" + cityDate + ")");
@@ -138,6 +145,7 @@ function appendInformation() {
   $("<div>").appendTo("#wrapDash").addClass("cityInfo").text("Humidity: " + humidity + "%");
   $("<div>").appendTo("#wrapDash").addClass("cityInfo").text("Wind Speed: " + windSpeed + " MPH");
 }
+
 // Assigning the uv background color based on value
 function uvColor() {
   if (uvIndex >= 11.00) {
@@ -156,6 +164,7 @@ function uvColor() {
     $("div").find("span").css("background-color", "lightblue");
   }
 }
+
 // When they click on a button, it will empty the main dashboard and 5 day display and replace with the new information
 $(".cities").on("click", function() {
   $(".empty").empty();

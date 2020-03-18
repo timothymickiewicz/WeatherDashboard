@@ -83,3 +83,6 @@ h2 {
     width: 50%;
     margin: 0.1vw;
 }
+.hidden {
+    display: none;
+}

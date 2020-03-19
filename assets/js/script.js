@@ -48,7 +48,7 @@ btn.on("click", function() {
       windSpeed = response.list[0].wind.speed;
       latitude = response.city.coord.lat;
       longitude = response.city.coord.lon;
-      // Doing a second ajax query to obtain the UV index;
+      // Doing another query to obtain the UV index;
       var queryURL2 = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + latitude + "&lon=" + longitude + "";
         $.ajax({
           url: queryURL2,
@@ -93,7 +93,7 @@ function pageLoad() {
     windSpeed = response.list[0].wind.speed;
     latitude = response.city.coord.lat;
     longitude = response.city.coord.lon;
-    // Doing a second ajax query to obtain the UV index;
+    // Doing another query to obtain the UV index;
     var queryURL2 = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + latitude + "&lon=" + longitude + "";
       $.ajax({
         url: queryURL2,
@@ -141,7 +141,7 @@ function loadBtns() {
           windSpeed = response.list[0].wind.speed;
           latitude = response.city.coord.lat;
           longitude = response.city.coord.lon;
-          // Doing a second ajax query to obtain the UV index;
+          // Doing another query to obtain the UV index;
           var queryURL2 = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey + "&lat=" + latitude + "&lon=" + longitude + "";
           $.ajax({
             url: queryURL2,

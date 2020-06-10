@@ -14,8 +14,6 @@ var latitude = "";
 var longitude = "";
 var weatherIcon = "";
 var fiveDayHumidity = "";
-var generateReadMe = require("././node_modules/@tmickiewicz/easymd/index.js");
-console.log(generateReadMe.generate);
 // Puts date and time onto header
 $("#date").text(date);
 
